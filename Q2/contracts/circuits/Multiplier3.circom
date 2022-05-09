@@ -4,14 +4,14 @@ pragma circom 2.0.0;
 
 template Multiplier3 () {  
 
-   // Declaration of signals.  
-   signal input a;  
-   signal input b;
-   signal input c;
-   signal output d;  
-
-   // Constraints.  
-   d <== a * b * c;  
+   signal input x; 
+   signal input y; 
+   signal input z; 
+   signal temp;
+   signal output r;
+ 
+   temp <== x*y; 
+   temp*z ==> r;
 }
 
 component main = Multiplier3();
